@@ -1,0 +1,18 @@
+import numpy as np
+
+# 創建0~9的数组a, 減去5 ,並打印
+a = np.arange(10) - 5
+print(a)
+
+# 用Python的方式對a取絕對值
+def f1():
+    return abs(a)
+# 用np的方式對a取絕對值
+def f2():
+    return np.abs(a)
+
+# Python函数
+print(f1())
+
+# numpy函数
+print(f2())

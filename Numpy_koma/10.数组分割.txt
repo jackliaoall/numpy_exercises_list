@@ -1,0 +1,24 @@
+import numpy as np
+
+# 1维数组
+# 創建0~7的数组a, 並打印
+a = np.arange(8)
+print(a)
+# 將数组切成0~2 3~7兩組, 並打印
+print(np.split(a, [3]))
+# 將数组切成0~2 3~5 6~7三組, 並打印
+print(np.split(a, [3, 6]))
+
+
+# 2维数组
+# 創建0~15的数组b, 並reshape為4*4, 並打印
+b = np.arange(16).reshape(4,4)
+print(b)
+# 垂直方向，横向出刀, 分成兩組, 並打印
+upper, lower = np.vsplit(b, [2])
+print(upper)
+print(lower)
+# 水平方向，竖向出刀, 分成兩組, 並打印
+left, right = np.hsplit(b, [2])
+print(left)
+print(right)

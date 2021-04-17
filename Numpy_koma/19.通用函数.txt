@@ -1,0 +1,12 @@
+import numpy as np
+
+X = np.array([1,2,3,5,8,13,21])
+
+# 用np的 全加 最大值 極大值 對X使用
+print(np.sum(X))
+print(np.max(X))
+print(np.argmax(X))
+# 用 X<10 any all => 用
+print(X<10)
+print(np.any(X<10))
+print(np.all(X<10))

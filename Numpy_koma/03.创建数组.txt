@@ -1,0 +1,68 @@
+# NumPy数组(ndarray), 引入numpy
+import numpy as np
+
+---------------------------------------------------------------------------------------------
+# 整数数组, 創建陣列1, 2, 3, 5, 8, 1, 轉為np.array, 打印該array, 並打印dtype
+myarray = [1, 2, 3, 5, 8, 13]
+nparray = np.array(myarray)
+print(nparray)
+print(nparray.dtype)
+
+# 浮点数数组, 創建陣列1.1, 2.1, 3.1, 5.1, 8.1, 13.1, 20., 轉為np.array, 打印該array, 並打印dtype
+myarray = [1.1, 2.1, 3.1, 5.1, 8.1, 13.1, 20.]
+nparray = np.array(myarray)
+print(nparray)
+print(nparray.dtype)
+
+# 多维数组, 創建2维数组, 1, 2, 3 10,20,30, 轉為np.array, 打印該array, 並打印dtype
+myarray = [
+    [1, 2, 3],
+    [10,20,30]
+]
+nparray = np.array(myarray)
+print(nparray)
+print(nparray.shape)
+
+---------------------------------------------------------------------------------------------
+# 全0数组
+# 創建5個0值的数组, 並打印
+nparray = np.zeros((5))
+print(nparray)
+# 創建4*6個0值的数组, 並打印
+nparray = np.zeros((4, 6))
+print(nparray)
+
+# 全1数组
+# 創建5個1值的数组, 並打印
+nparray = np.ones((5))
+print(nparray)
+# 創建4*6個1值的数组, 並打印
+nparray = np.ones((4, 6))
+print(nparray)
+
+---------------------------------------------------------------------------------------------
+# 指定数值数组
+# 創建3*5個3.14值的数组, 並打印
+nparray = np.full((3,5), 3.14)
+print(nparray)
+
+---------------------------------------------------------------------------------------------
+# 生成顺序数组
+# 用np創建0~9的数组
+nparray = np.arange(10)
+print(nparray)
+# 用np創建5~9的数组
+nparray = np.arange(5, 10)
+print(nparray)
+# 用np創建1,3,5,7,9的数组
+nparray = np.arange(1, 10, 2)
+print(nparray)
+# 用np創建0,2,4,6,8的数组
+nparray = np.arange(0, 10, 2)
+print(nparray)
+
+---------------------------------------------------------------------------------------------
+# 线段分数组
+# 用np創建0.,6.,12.,18.,24.的数组
+nparray = np.linspace(0, 24, 5)
+print(nparray)

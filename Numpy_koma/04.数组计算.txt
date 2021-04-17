@@ -1,0 +1,49 @@
+import numpy as np
+
+# 数组计算
+a1 = np.array([10,20,30,40,50])
+print(a1)
+# 打印数组的總和 最小值 最大值
+print(a1.sum())
+print(a1.min())
+print(a1.max())
+
+# 用np創建0~4的数组a2, a1跟a2做 加,減,乘 的運算並打印
+a2 = np.arange(5)
+print(a2)
+
+a3 = a1 + a2
+print(a3)
+
+a4 = a1 - a2
+print(a4)
+print(a4 < 30)
+
+a5 = a1 * a2
+print(a5)
+
+# 多维数组计算, 創造底下的数组並打印shape
+[[ 0  1  2  3]
+ [ 4  5  6  7]
+ [ 8  9 10 11]]
+------------------------------
+b = np.arange(12).reshape(3,4)
+print(b)
+print(b.shape)
+
+# *矩阵相乘*, X對W相乘為Y (Y = X * W), 並打印
+X = np.array([
+    [1,1,0],
+    [0,1,1]
+])
+W = np.array([
+    [2,0],
+    [3,4],
+    [1,2]
+])
+Y = np.dot(X, W)
+print(Y)
+
+# 寫出另一种写法, 並打印
+Y = X @ W
+print(Y)
