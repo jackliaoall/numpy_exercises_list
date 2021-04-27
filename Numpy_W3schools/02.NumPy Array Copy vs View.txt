@@ -1,0 +1,29 @@
+import numpy as np
+
+#(1)COPY
+arr = np.array([1, 2, 3, 4, 5])
+#用copy的方式賦值給x, 改變陣列第一個元素為42, 打印arr跟x
+x = arr.copy()
+arr[0] = 42
+
+print(arr)
+print(x)
+
+#(2)VIEW
+arr = np.array([1, 2, 3, 4, 5])
+#用view的方式賦值給x, 改變陣列第一個元素為42, 打印arr跟x
+x = arr.view()
+arr[0] = 42
+
+print(arr)
+print(x)
+
+#(3)Check if Array Owns it's Data
+arr = np.array([1, 2, 3, 4, 5])
+
+#用copy或view的方式賦值給x y, 打印base
+x = arr.copy()
+y = arr.view()
+
+print(x.base)
+print(y.base)

@@ -1,0 +1,24 @@
+import numpy as np
+
+#(1)Filtering Arrays
+arr = np.array([41, 42, 43, 44])
+
+#濾除42, 44
+x = [True, False, True, False]
+
+newarr = arr[x]
+
+print(newarr)
+
+#(2)Creating Filter Directly From Array
+import numpy as np
+
+arr = np.array([41, 42, 43, 44])
+
+#保留大於42的值
+filter_arr = arr > 42
+
+newarr = arr[filter_arr]
+
+print(filter_arr)
+print(newarr)
